@@ -1,6 +1,10 @@
 var gameStarted = false;
 var btnPattern = [];
 var playerPattern = [];
+var greenSound = new Audio("sounds/green.mp3");
+var redSound = new Audio("sounds/red.mp3");
+var yellowSound = new Audio("sounds/yellow.mp3");
+var blueSound = new Audio("sounds/blue.mp3");
 
 function startGame() {
   gameStarted = true;
@@ -53,22 +57,18 @@ function animationSwitch(animation, buttonNumber) {
   switch (buttonNumber) {
     case 1:
       animation("green");
-      var greenSound = new Audio("sounds/green.mp3");
       greenSound.play();
       break;
     case 2:
       animation("red");
-      var redSound = new Audio("sounds/red.mp3");
       redSound.play();
       break;
     case 3:
       animation("yellow");
-      var yellowSound = new Audio("sounds/yellow.mp3");
       yellowSound.play();
       break;
     case 4:
       animation("blue");
-      var blueSound = new Audio("sounds/blue.mp3");
       blueSound.play();
       break;
   }
